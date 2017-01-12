@@ -18,15 +18,12 @@ import com.google.android.gms.common.api.GoogleApiClient;
 import id.sch.smktelkom_mlg.learn.recyclerview3.model.Hotel;
 
 public class DetailActivity extends AppCompatActivity {
+
+    /**
+     * ATTENTION: This was auto-generated to implement the App Indexing API.
+     * See https://g.co/AppIndexing/AndroidStudio for more information.
+     */
     private GoogleApiClient client;
-
-    addApi(AppIndex.API)
-
-    client=new GoogleApiClient.Builder(this).
-
-    build();
-
-    .
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,10 +58,15 @@ public class DetailActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+        // ATTENTION: This was auto-generated to implement the App Indexing API.
+        // See https://g.co/AppIndexing/AndroidStudio for more information.
+        client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
     }
 
-}
-
+    /**
+     * ATTENTION: This was auto-generated to implement the App Indexing API.
+     * See https://g.co/AppIndexing/AndroidStudio for more information.
+     */
     public Action getIndexApiAction() {
         Thing object = new Thing.Builder()
                 .setName("Detail Page") // TODO: Define a title for the content shown.
@@ -80,6 +82,9 @@ public class DetailActivity extends AppCompatActivity {
     @Override
     public void onStart() {
         super.onStart();
+
+        // ATTENTION: This was auto-generated to implement the App Indexing API.
+        // See https://g.co/AppIndexing/AndroidStudio for more information.
         client.connect();
         AppIndex.AppIndexApi.start(client, getIndexApiAction());
     }
@@ -87,6 +92,9 @@ public class DetailActivity extends AppCompatActivity {
     @Override
     public void onStop() {
         super.onStop();
+
+        // ATTENTION: This was auto-generated to implement the App Indexing API.
+        // See https://g.co/AppIndexing/AndroidStudio for more information.
         AppIndex.AppIndexApi.end(client, getIndexApiAction());
         client.disconnect();
     }
